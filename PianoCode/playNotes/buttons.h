@@ -6,7 +6,7 @@
 #define BUTTON_PIN_5 20
 #define BUTTON_PIN_6 19
 #define BUTTON_PIN_7 18
-#define BUTTON_PIN_8 9
+#define BUTTON_PIN_8 1
 
 // Function to initialize all button pins
 void initButtons() {
@@ -23,4 +23,16 @@ void initButtons() {
 // Function to check if a specific button is pressed
 bool isButtonPressed(int buttonPin) {
   return digitalRead(buttonPin) == HIGH; // Returns true if the button is pressed
+}
+
+//checks if any button is pressed
+bool isAnyButtonPressed() {
+  return isButtonPressed(BUTTON_PIN_1) ||
+         isButtonPressed(BUTTON_PIN_2) ||
+         isButtonPressed(BUTTON_PIN_3) ||
+         isButtonPressed(BUTTON_PIN_4) ||
+         isButtonPressed(BUTTON_PIN_5) ||
+         isButtonPressed(BUTTON_PIN_6) ||
+         isButtonPressed(BUTTON_PIN_7) ||
+         isButtonPressed(BUTTON_PIN_8);
 }
