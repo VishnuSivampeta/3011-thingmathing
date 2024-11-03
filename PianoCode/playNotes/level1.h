@@ -12,11 +12,13 @@
 #define SPEAKER_PIN 4
 
 
-bool checkCL() {
+bool checkCL(int x) {
   bool correctNote = false;
   bool redCard = false;
   //TODO: setup screen for question and light up correct LED
-  out7();
+  if (x == 0) {
+    out7();
+  }
   while (!correctNote) {
     if (redCard) {
       //TODO: check for red card, return if its detected
@@ -43,11 +45,13 @@ bool checkCL() {
   }
 }
 
-bool checkD() {
+bool checkD(int x) {
   bool correctNote = false;
   bool redCard = false;
   //TODO: setup screen for question and light up correct LED
-  out5();
+  if (x == 0) {
+    out5();
+  }
   while (!correctNote) {
     if (redCard) {
       //TODO: check for red card, return if its detected
@@ -74,11 +78,13 @@ bool checkD() {
   }
 }
 
-bool checkE() {
+bool checkE(int x) {
   bool correctNote = false;
   bool redCard = false;
   //TODO: setup screen for question and light up correct LED
-  out3();
+  if (x == 0) {
+    out3();
+  }
   while (!correctNote) {
     if (redCard) {
       //TODO: check for red card, return if its detected
@@ -105,11 +111,13 @@ bool checkE() {
   }
 }
 
-bool checkF() {
+bool checkF(int x) {
   bool correctNote = false;
   bool redCard = false;
   //TODO: setup screen for question and light up correct LED
-  out1();
+  if (x == 0) {
+    out1();
+  }
   while (!correctNote) {
     if (redCard) {
       //TODO: check for red card, return if its detected
@@ -135,11 +143,13 @@ bool checkF() {
   }
 }
 
-bool checkG() {
+bool checkG(int x) {
   bool correctNote = false;
   bool redCard = false;
   //TODO: setup screen for question and light up correct LED
-  out15();
+  if (x == 0) {
+    out7();
+  }
   while (!correctNote) {
     if (redCard) {
       //TODO: check for red card, return if its detected
@@ -165,11 +175,13 @@ bool checkG() {
   }
 }
 
-bool checkA() {
+bool checkA(int x) {
   bool correctNote = false;
   bool redCard = false;
   //TODO: setup screen for question and light up correct LED
-  out9();
+  if (x == 0) {
+    out9();
+  }
   while (!correctNote) {
     if (redCard) {
       //TODO: check for red card, return if its detected
@@ -196,11 +208,13 @@ bool checkA() {
   }
 }
 
-bool checkB() {
+bool checkB(int x) {
   bool correctNote = false;
   bool redCard = false;
   //TODO: setup screen for question and light up correct LED
-  out13();
+  if (x == 0) {
+    out13();
+  }
   while (!correctNote) {
     if (redCard) {
       //TODO: check for red card, return if its detected
@@ -226,11 +240,13 @@ bool checkB() {
   }
 }
 
-bool checkCH() {
+bool checkCH(int x) {
   bool correctNote = false;
   bool redCard = false;
   //TODO: setup screen for question and light up correct LED
-  out11();
+  if (x == 0) {
+    out11();
+  }
   while (!correctNote) {
     if (redCard) {
       //TODO: check for red card, return if its detected
@@ -259,12 +275,36 @@ bool checkCH() {
 void levelOne() {
   //show note letter, staff, and light up key
   //check to see if they want to stop by scanning for a red card
-  checkE();
-  checkG();
-  checkB();
-  checkCL();
-  checkD();
-  checkCH();
-  checkF();
-  checkA();
+  checkE(0);
+  checkG(0);
+  checkB(0);
+  checkCL(0);
+  checkD(0);
+  checkCH(0);
+  checkF(0);
+  checkA(0);
+}
+
+void levelTwo() {
+  //show the letter and staff
+  checkE(1);
+  checkG(1);
+  checkB(1);
+  checkCL(1);
+  checkD(1);
+  checkCH(1);
+  checkF(1);
+  checkA(1);
+}
+
+void levelThree() {
+  //show the letter and staff
+  checkE(2);
+  checkG(2);
+  checkB(2);
+  checkCL(2);
+  checkD(2);
+  checkCH(2);
+  checkF(2);
+  checkA(2);
 }
